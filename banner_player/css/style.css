@@ -32,13 +32,16 @@ body{
 }
 
 .slide1{
-	background-image: url(../img/bg1.jpg);
+	/*background-image: url(../img/bg1.jpg);*/
+	background-color: #1e5e8e;
 }
 
 .slide2{
-	background-image: url(../img/bg2.jpg);
+	/*background-image: url(../img/bg2.jpg);*/
+	background-color: green;
 }
 
 .slide3{
-	background-image: url(../img/bg3.jpg);
+	/*background-image: url(../img/bg3.jpg);*/
+	background-color: blue;
 }
