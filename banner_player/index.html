@@ -1,24 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>The comprehensive effects</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<div class="main">
-	<div class="banner">
-	    <!-- player effect-->
-		<a href="">
-			<div class="banner_slide slide1"></div>
-		</a>
-		<a href="">
-			<div class="banner_slide slide2"></div>
-		</a>
-		<a href="">
-			<div class="banner_slide slide3"></div>
-		</a>
-	</div>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>The comprehensive effects</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="main" id="main">
+      <div class="menu-box "></div>
+      <!--  submenu  -->
+      <div class="sub-menu hide">
+        <div class="sub-menu-catalog">1</div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">first:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">second:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+      </div>
+      <div class="sub-menu hide">
+        <div class="sub-menu-catalog">2</div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">first:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">second:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+      </div>
+      <div class="sub-menu hide">
+        <div class="sub-menu-catalog">3</div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">first:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">second:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+      </div>
+      <div class="sub-menu hide">
+        <div class="sub-menu-catalog">4</div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">first:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+        <div class="sub-menu-row">
+          <span class="sub-menu-row-title mr10">second:</span>
+          <a href="">12</a>
+          <span class="ml10 mr10">/</span>
+          <a href="">13</a>
+        </div>
+      </div>
+      <!--  menu  -->
+      <div class="menu-content" id="menu-content">
+        <div class="menu-item">
+          <a href="">
+            <span>1</span>
+            <i>&#xe665;</i>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span>2</span>
+            <i>&#xe665;</i>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span>3</span>
+            <i>&#xe665;</i>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span>4</span>
+            <i>&#xe665;</i>
+          </a>
+        </div>
+      </div>
+      <!--  banner player    -->
+      <div class="banner" id="banner">
+        <!-- player effect-->
+        <a href="">
+          <div class="banner_slide slide1 active"></div>
+        </a>
+        <a href="">
+          <div class="banner_slide slide2"></div>
+        </a>
+        <a href="">
+          <div class="banner_slide slide3"></div>
+        </a>
+      </div>
+      <!-- pre one , next one -->
+      <a href="javascript:prev();" class="button prev"></a>
+      <a href="javascript:next();" class="button next"></a>
+      <!-- dot nav -->
+      <div class="dots" id="dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!--   script  -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
 </html>
