@@ -1,0 +1,83 @@
+/*style.css*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+/* main */
+.main{
+	width: 1200px;
+	height: 500px;
+	margin: 10px auto;
+
+}
+
+
+/* nav */
+nav{
+	width: 1200px;
+	height: 40px;
+	/*background: #00f;*/
+	border-style: dashed;
+	border-width: 1px 1px 0 1px;
+	border-radius: 4px;
+}
+
+nav > a{
+	display: block;
+	float: left;
+	width: 300px;
+	line-height: 40px;
+	text-align: center;
+	backgorund: #fff;
+}
+
+nav > a.active{
+	background: #fc0;
+	border-radius: 4px;
+}
+
+/* banner */
+.banner{
+	width: 1200px;
+	height: 460px;
+	/*background: #0f0;*/
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+.banner > div{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 1200px;
+	height: 460px;
+	display: none;
+}
+
+.banner > div.active{
+	display: block;
+}
+
+
+/* slide */
+.slide1{
+	background: url(../img/ba1.jpg) no-repeat;
+}
+.slide2{
+	background: url(../img/ba2.jpg) no-repeat;
+}
+.slide3{
+	background: url(../img/ba3.jpg) no-repeat;
+}
+.slide4{
+	background: url(../img/ba4.jpg) no-repeat;
+}
+
