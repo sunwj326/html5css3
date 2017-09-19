@@ -1,0 +1,23 @@
+/*style.css*/
+
+*{
+	margin:0;
+	padding:0;
+	/*border: none;*/
+}
+
+.main{
+	width: 400px;
+	margin: 100px auto;
+	/*background: #122;*/
+	text-align: center;
+}
+
+.operator{
+	/*text-align: left;*/
+	margin-top: 10px;
+}
+
+.operator > input {
+	width: 20px;
+}
