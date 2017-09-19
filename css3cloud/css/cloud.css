@@ -1,0 +1,11 @@
+* {margin: 0;padding: 0;border: none;}
+.sky {width: 100vw;height: 50vh;background: linear-gradient(180deg, rgb(196, 228, 253) 50%, #fff 80%);}
+.ground {width: 100vw;height: 50vh;background: linear-gradient(0deg, rgb(148, 190, 89), #fff);}
+.cloud {position: absolute;width: 100px;height: 100px;border-radius: 50%;background: #fff;}
+.cloud::before {position: absolute;top: 42px;left: -56px;display: block;width: 167px;height: 51px;content: '';border-radius: 32px;background: #fff;}
+.cloud::after {position: absolute;top: 39px;left: -48px;display: block;width: 82px;height: 56px;content: '';transform: rotate(56deg);border-radius: 32px;background: #fff;}
+.x1 {top: 12vh;left: 50vw;}
+.x2 {top: 9vh;left: 33vw;transform: scale(.8);}
+.x3 {top: 21vh;left: 41vw;transform: scale(.7);}
+.x4 {top: 7vh;left: 73vw;transform: scale(.7);}
+.x5 {top: 19vh;left: 60vw;transform: scale(.5);

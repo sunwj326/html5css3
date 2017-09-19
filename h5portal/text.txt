@@ -1,0 +1,26 @@
+banner
+portfolio
+stats
+team
+contactus
+
+Nav:
+HOME
+PORTFOLIO
+TEAM
+CONTACT US
+
+Welcome to Website
+Lorem ipsum dolor sit amet, consecteutr adipisicing elit
+
+Portfolio
+Lorem ipsum dolor sit amet, consecteutr adipisicing edit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+ALL
+WEB
+SOFTWARE
+WORKS
+BRANDS
+
+Stats
+Lorem ipsum dolor sit amet, consecteutr adipisicing edit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
