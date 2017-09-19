@@ -6,18 +6,22 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="main">
-	<input type="text" name="pre-num" value="1" />
-	<span>+</span>
-	<input type="text" name="second-num" value="2" />
-	<span>=</span>
-	<span id="result">3</span>
-	<div class="operator">
-		<input type="button" value="+" />
-		<input type="button" value="-" />
-		<input type="button" value="*" />
-		<input type="button" value="/" />
+<div class="cal" id="cal">
+	<p>
+		<input type="text" name="inputA" value="1" class="inputA" />
+	</p>
 	<div>
+		<input class="operator active" type="button" title="add" value="+" />
+		<input class="operator" type="button" title="subtract" value="-" />
+		<input class="operator" type="button" title="multiply" value="*" />
+		<input class="operator" type="button" title="divide" value="/" />
+	</div>
+	<p>
+		<input type="text" name="inputB" value="2" class="inputB" />
+	</p>
+	<p><h1>=</h1></p>
+	<p class="result">3</p>
+	
 </div>
 
 <script src="js/script.js"></script>
