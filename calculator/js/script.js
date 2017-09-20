@@ -6,46 +6,112 @@
 // var result = document.querySelector('#result');
 // var buttons = operator.getElementsByTagName('input');
 
-var calBox = document.querySelector('#cal');
 
-var cal = {
-	inputA: calBox.querySelector('.inputA'),
-	inputB: calBox.querySelector('.inputB'),
-	operators: calBox.querySelectorAll('.operator'),
-	result: calBox.querySelector('.result'),
-	firstNum: function(){
-		return this.inputA ? +this.inputA.value : 0;
-	},
-	secondNum: function(){
-		return this.inputB ? +this.inputB.value : 0;
-	},
-	setResult: function(val){
-		this.result.innerHTML = val;
-	}
+// var operations = {
+// 	add: function (num1, num2){
+// 		return num1 + num2;
+// 	},
 
-}
+// 	subtract: function (num1, num2){
+// 		return num1 - num2;
+// 	},
 
-for(var i in cal.operators){
-	cal.operators[i].onclick = function (){
-		switch(this.title){
-			case 'add':
-				outputResult(add());
-				break;
-			case 'subtract':
-				outputResult(subtract());
-				break;
+// 	operate: function(operator){
+// 		return this[operator].apply(this, [].slice.call(arguments, 1, arguments.length));
+// 	}
+// }
+
+function Calculator (id) {
+	var calBox = document.querySelector(id);
+	var inputA = calBox.querySelector('input.inputA');
+	var inputB = calBox.querySelector('input.inputB');
+	var operators = calBox.querySelectorAll('input.operator');
+	var resultBox = calBox.querySelector('p.resultBox');
+	var buttonBox = calBox.querySelector('div.buttonBox');
+	var operations = {
+		add: function (num1, num2){
+			return num1 + num2;
+		},
+		subtract: function (num1, num2){
+			return num1 - num2;
+		},
+		multiply: function (num1, num2){
+			return num1 * num2;
+		},
+		divide: function (num1, num2){
+			return num1 / num2;
+		},
+		invest: function (num1){
+			return 1 / num1;
+		},
+		operate: function(operator){
+			return this[operator].apply(this, [].slice.call(arguments, 1, arguments.length));
+		},
+		addOperation: function(name, fn){
+			if(!this[name]) {
+				this[name] = fn;
+			}
+			return this;
 		}
+	};
+
+	this.addOperation = function(name, fn){
+		operations.addOperation(name, fn);
 	}
+
+	function changeOperator(operator){
+		var activeClass = 'active';
+		var currentOperator = buttonBox.querySelector('input.active');
+		currentOperator.classList.remove(activeClass);
+		operator.classList.add(activeClass);
+	}
+
+	function getFirstNum(){
+		return inputA ? +inputA.value : 0;
+	}
+
+	function getSecondNum(){
+		return inputB ? +inputB.value : 0;
+	}
+
+	function setResult(val){
+		resultBox.innerHTML = val;
+	}
+
+	this.init = function(){
+		buttonBox.addEventListener('click', function(e){
+			// compatible handler
+			var event = e || window.event;
+			var target = event.target || event.srcElement;
+			// wheather match the element
+			if( target.classList.contains('operator') )
+			{
+				changeOperator(target);
+				setResult(operations.operate(target.title, getFirstNum(), getSecondNum()));
+			}
+		});
+	}
+
 }
 
-function add(){
-	return cal.firstNum() + cal.secondNum();
-}
+var cal = new Calculator('#cal');
+cal.init();
+cal.addOperation('mod', function(num1, num2){
+	return num1 % num2;
+});
 
-function subtract(){
-	return cal.firstNum() - cal.secondNum();
-}
+// function each(items, fn) {
+// 	for(var i in items) {
+// 		fn(i, items[i]);
+// 	}
+// }
 
-function outputResult(output){
-	cal.setResult(output);
-}
+
+// each(cal.operators, function(index, button){
+// 	button.onclick = function (){
+// 		cal.setResult(cal.operate(this.title, cal.firstNum, cal.secondNum));
+// 	}
+// });
+	
+
+
