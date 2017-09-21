@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tansition</title>
+</head>
+<style>
+.box{
+	width: 200px;
+	height: 200px;
+	background-image: url(img/img_flwr.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	opacity: 0;
+	animation-name: fadeOut;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+}
+
+/*.box:hover{
+	transform: scale(1);
+}
+*/
+@keyframes fadeOut{
+	0% { opacity: 1; background-size: 100%;}
+	100% { opacity: 0; background-size: 150%;}
+}
+</style>
+<body>
+<div class="box"></div>
+</body>
+</html>

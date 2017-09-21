@@ -3,7 +3,6 @@
 	height: 400px;
 	position: relative;
 	margin: 0 auto;
-	overflow: hidden;
 	border: 20px solid #fff;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
@@ -90,16 +89,13 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: 0px;
+	top: 400px;
 	left: 0px;
-	-webkit-transform: scale(1.5);
-	-moz-transform: scale(1.5);
-	-o-transform: scale(1.5);
-	-ms-transform: scale(1.5);
-	transform: scale(1.5);
-	opacity: 0;
 	z-index: 2;
 	text-indent: -9000px;
+}
+.cr-bgimg div:nth-child(even) span{
+	top: -400px;
 }
 .cr-container input.cr-selector-img-1:checked ~ .cr-bgimg,
 .cr-bgimg div span:nth-child(1){
@@ -129,55 +125,77 @@
 .cr-bgimg div:nth-child(4) span{
 	background-position: -450px 0px;
 }
+
 .cr-container input:checked ~ .cr-bgimg div span{
-	-webkit-animation: scaleOut 0.6s ease-in-out;
-	-moz-animation: scaleOut 0.6s ease-in-out;
-	-o-animation: scaleOut 0.6s ease-in-out;
-	-ms-animation: scaleOut 0.6s ease-in-out;
-	animation: scaleOut 0.6s ease-in-out;
+	-webkit-animation: slideOutUp 0.6s ease-in-out;
+	-moz-animation: slideOutUp 0.6s ease-in-out;
+	-o-animation: slideOutUp 0.6s ease-in-out;
+	-ms-animation: slideOutUp 0.6s ease-in-out;
+	animation: slideOutUp 0.6s ease-in-out;
 }
-@-webkit-keyframes scaleOut{
-	0%{ -webkit-transform: scale(1); opacity: 1; }
-	100%{ -webkit-transform: scale(1.5); opacity: 0; }
+.cr-container input:checked ~ .cr-bgimg div:nth-child(even) span{
+	-webkit-animation: slideOutDown 0.6s ease-in-out;
+	-moz-animation: slideOutDown 0.6s ease-in-out;
+	-o-animation: slideOutDown 0.6s ease-in-out;
+	-ms-animation: slideOutDown 0.6s ease-in-out;
+	animation: slideOutDown 0.6s ease-in-out;
 }
-@-moz-keyframes scaleOut{
-	0%{ -moz-transform: scale(1); opacity: 1; }
-	100%{ -moz-transform: scale(1.5); opacity: 0; }
+@-webkit-keyframes slideOutUp{
+	0%{ top: 0px; }
+	100%{ top: -400px; }
 }
-@-o-keyframes scaleOut{
-	0%{ -o-transform: scale(1); opacity: 1; }
-	100%{ -o-transform: scale(1.5); opacity: 0; }
+@-webkit-keyframes slideOutDown{
+	0%{ top: 0px; }
+	100%{ top: 400px; }
 }
-@-ms-keyframes scaleOut{
-	0%{ -ms-transform: scale(1); opacity: 1; }
-	100%{ -ms-transform: scale(1.5); opacity: 0; }
+@-moz-keyframes slideOutUp{
+	0%{ top: 0px; }
+	100%{ top: -400px; }
 }
-@keyframes scaleOut{
-	0%{ transform: scale(1); opacity: 1; }
-	100%{ transform: scale(1.5); opacity: 0; }
+@-moz-keyframes slideOutDown{
+	0%{ top: 0px; }
+	100%{ top: 400px; }
+}
+@-o-keyframes slideOutUp{
+	0%{ top: 0px; }
+	100%{ top: -400px; }
+}
+@-o-keyframes slideOutDown{
+	0%{ top: 0px; }
+	100%{ top: 400px; }
+}
+@-ms-keyframes slideOutUp{
+	0%{ top: 0px; }
+	100%{ top: -400px; }
+}
+@-ms-keyframes slideOutDown{
+	0%{ top: 0px; }
+	100%{ top: 400px; }
+}
+@keyframes slideOutUp{
+	0%{ top: 0px; }
+	100%{ top: -400px; }
+}
+@keyframes slideOutDown{
+	0%{ top: 0px; }
+	100%{ top: 400px; }
 }
 .cr-container input.cr-selector-img-1:checked ~ .cr-bgimg div span:nth-child(1),
 .cr-container input.cr-selector-img-2:checked ~ .cr-bgimg div span:nth-child(2),
 .cr-container input.cr-selector-img-3:checked ~ .cr-bgimg div span:nth-child(3),
-.cr-container input.cr-selector-img-4:checked ~ .cr-bgimg div span:nth-child(4)
-{
-	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
-	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
-	-o-transition: -o-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
-	-ms-transition: -ms-transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, z-index 0s linear 0.6s;
+.cr-container input.cr-selector-img-4:checked ~ .cr-bgimg div span:nth-child(4){
+	-webkit-transition: top 0.5s ease-in-out;
+	-moz-transition: top 0.5s ease-in-out;
+	-o-transition: top 0.5s ease-in-out;
+	-ms-transition: top 0.5s ease-in-out;
+	transition: top 0.5s ease-in-out;
 	-webkit-animation: none;
 	-moz-animation: none;
 	-o-animation: none;
 	-ms-animation: none;
 	animation: none;
-	opacity: 1;
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-o-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: scale(1);
-	z-index: 10000;
+	top: 0px;
+	z-index: 10;
 }
 .cr-titles h3{
 	color: #fff;
@@ -190,22 +208,20 @@
 	left: 0px;
 	text-align: center;
 	opacity: 0;
-	top: 50%;
 }
 .cr-titles h3 span:nth-child(1){
-	left: 0px;
+	top: 15%;
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 	font-size: 70px;
 	letter-spacing: 7px;
-	color: transparent;
-	text-shadow: 0px 0px 10px #fff;
-	-webkit-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
-	-moz-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
-	-o-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
-	-ms-transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
-	transition: text-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+	-webkit-transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
+	-moz-transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
+	-o-transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
+	-ms-transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
+	transition: opacity 0.8s ease-in-out, top 0.8s ease-in-out;
 }
 .cr-titles h3 span:nth-child(2){
+	top: 50%;
 	margin-top: 84px;
 	letter-spacing: 0px;
 	background: rgba(104,171,194,0.9);
@@ -219,16 +235,12 @@
 	-ms-transition: opacity 0.8s ease-in-out;
 	transition: opacity 0.8s ease-in-out;
 }
-.cr-container input:checked ~ .cr-titles h3 span{
-	opacity: 0;
-	text-shadow: 0px 0px 30px #fff;
-}
 .cr-container input.cr-selector-img-1:checked ~ .cr-titles h3:nth-child(1) span:nth-child(1),
 .cr-container input.cr-selector-img-2:checked ~ .cr-titles h3:nth-child(2) span:nth-child(1),
 .cr-container input.cr-selector-img-3:checked ~ .cr-titles h3:nth-child(3) span:nth-child(1),
 .cr-container input.cr-selector-img-4:checked ~ .cr-titles h3:nth-child(4) span:nth-child(1){
 	opacity: 1;
-	text-shadow: 0px 0px 1px #fff;
+	top: 50%;
 }
 .cr-container input.cr-selector-img-1:checked ~ .cr-titles h3:nth-child(1) span:nth-child(2),
 .cr-container input.cr-selector-img-2:checked ~ .cr-titles h3:nth-child(2) span:nth-child(2),

@@ -177,7 +177,7 @@
 	-o-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
-	z-index: 10000;
+	z-index:10000;
 }
 .cr-titles h3{
 	color: #fff;
