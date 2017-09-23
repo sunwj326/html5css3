@@ -1,0 +1,43 @@
+/*! 版权所有，翻版必究 */
+/*Greeter.css*/
+._16xre3sc5AxHpoaZlFB-tH {
+	backgorund-color: #eee;
+	padding: 10px;
+	border: 3px solid #ccc;
+	opacity: 0;
+	-webkit-animation: _1ldim6mQkF-ii1HW3CkvNS 1s ease-in-out;
+	        animation: _1ldim6mQkF-ii1HW3CkvNS 1s ease-in-out;
+}
+
+@-webkit-keyframes _1ldim6mQkF-ii1HW3CkvNS{
+	0% { opacity: 1;}
+	100% { opacity: 0;}
+}
+
+@keyframes _1ldim6mQkF-ii1HW3CkvNS{
+	0% { opacity: 1;}
+	100% { opacity: 0;}
+}/* main.css */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}

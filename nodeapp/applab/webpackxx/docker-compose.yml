@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  project:
+    image: daocloud.io/library/node:6.11.2-alpine
+    volumes:
+      - ./:/webpackxx
+      - node_modules_6:/webpackxx/node_modules
+    # ports:
+    #   - "80:80"
+    container_name: webpackxx
+
+volumes:
+  node_modules_6:
