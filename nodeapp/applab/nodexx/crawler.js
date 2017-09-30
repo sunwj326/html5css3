@@ -1,3 +1,4 @@
+'use strict'
 const http = require('http');
 const url = require('url');
 const HttpProxyAgent = require('http-proxy-agent');
@@ -26,34 +27,45 @@ function filterTips(htmlData){
         //console.log($(elem).text());
         var title = $(elem).find('dl > dt > a');
         var brief = $(elem).find('dl > dd > p');
-        var news = {
-            title: title.text(),
-            brief: brief.text()
+        if(title.text().trim().length != 0) {
+            var news = {
+                title: title.text(),
+                brief: brief.text(),
+                href: title.attr('href')
+            }
+            newsList.push(news);
         }
-        newsList.push(news);
     });
 
     return newsList;
 }
-
-http.get(opts, (res)=>{
-    res.setEncoding('utf8');
-
-    let rawData = '';
-    res.on('data', (chunk)=>{
-        rawData += chunk;
+var pa = new Promise(function(resolve, reject){
+    http.get(opts, (res)=>{
+        res.setEncoding('utf8');
+    
+        let rawData = '';
+        res.on('data', (chunk)=>{
+            rawData += chunk;
+        });
+    
+        res.on('end', ()=>{
+            resolve(rawData);
+        });
+    }).on('error', (e)=>{
+        console.log(`Log error: ${e.message}`);
+        reject(error);
     });
+});
 
-    res.on('end', ()=>{
+pa.then(function(value){
         // console.log(rawData);
-        var list = filterTips(rawData);
+        var list = filterTips(value);
 
         // console.log(JSON.stringify(list));
         fs.writeFile('cnbeta.json', JSON.stringify(list), (err)=>{
             if(err) throw err;
             console.log('The news file has been saved!');
         });
-    });
-}).on('error', (e)=>{
-    console.log(`Log error: ${e.message}`);
+}).catch(function(error){
+    console.log(`catch error: ${error.message}`);
 });
