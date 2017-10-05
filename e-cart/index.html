@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>E-Cart</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+<div class="header_logo"></div>
+<nav>
+    <a href="">课程</a>
+    <a class="header_nav_updated" href="">职业路径</a>
+    <a href="">实战</a>
+    <a href="">猿问</a>
+    <a href="">手记</a>
+</nav>
+<div class="header_options">
+    <div class="header_options_search">
+        <input type="text" class="header_options_search_box"/>
+        <a href="#" class="header_options_search_button"></a>
+    </div>
+    <a class="header_options_cart" href="#"></a>
+    <a class="header_options_message" href="#"></a>
+    <a class="header_options_profile" href="#"></a>
+</div>
+</header>
+<section>
+    <div class="section_banner"></div>
+    <article>
+        <div class="cart_title">我的购物车</div>
+        <div class="cart_box">
+            <div class="cart_header">
+                <div class="cart_col_select">
+                    <input type="checkbox" id="allcheck" class="cart_select_input" value="">
+                    <label for="allcheck">全选</label>
+                </div>
+                <div class="cart_col_product">商品名称</div>
+                <div class="cart_col_total_price">总价</div>
+                <div class="cart_col_unit_price">单价</div>
+                <div class="cart_col_count">数量</div>
+                <div class="cart_col_operate">操作</div>
+            </div>
+            <div class="cart_item">
+                <div class="cart_col_select">
+                    <input type="checkbox" class="cart_col_select_checkbox">
+                </div>
+                <div class="cart_col_product">
+                    <img src="./img/g1.jpg" alt="" class="cart_col_product_img"/>
+                    <p class="cart_col_product_name">前端小白成长记前端小白成长记前端小白成长记前端小白成长记前端小白成长记</p>
+                </div>
+                <div class="cart_col_total_price">
+                    <span>¥</span><span class="cart_total_price">0</span>
+                </div>
+                <div class="cart_col_unit_price">
+                    <span>¥</span><span class="cart_unit_price">100</span>
+                </div>
+                <div class="cart_col_count">
+                    <a href="javascript:void(0);" class="cart_btn_cut">-</a>
+                    <input type="text" class="cart_col_count_input" value="0" />
+                    <a href="javascript:void(0);" class="cart_btn_add">+</a>
+                </div>
+                <div class="cart_col_operate">删除</div>
+            </div>
+            <div class="cart_item">
+                <div class="cart_col_select">
+                    <input type="checkbox" class="cart_col_select_checkbox">
+                </div>
+                <div class="cart_col_product">
+                    <img src="./img/g1.jpg" alt="" class="cart_col_product_img"/>
+                    <p class="cart_col_product_name">前端小白成长记前端小白成长记前端小白成长记前端小白成长记前端小白成长记</p>
+                </div>
+                <div class="cart_col_total_price">
+                    <span>¥</span><span class="cart_total_price">0</span>
+                </div>
+                <div class="cart_col_unit_price">
+                    <span>¥</span><span class="cart_unit_price">100</span>
+                </div>
+                <div class="cart_col_count">
+                    <a href="javascript:void(0);" class="cart_btn_cut">-</a>
+                    <input type="text" class="cart_col_count_input" value="0" />
+                    <a href="javascript:void(0);" class="cart_btn_add">+</a>
+                </div>
+                <div class="cart_col_operate">删除</div>
+            </div>
+        </div>
+        <div class="cart_summary">
+            <input type="button" class="cart_summary_submit" value="结算">
+            <div class="cart_summary_price">
+                <span>¥</span>
+                <span class="cart_summary_price_number">0</span>
+            </div>
+            <div>应付价格:</div>
+        </div>
+    </article>
+</section>
+<!--页脚-->
+<footer>
+    <!--页脚导航-->
+    <div class="footer-content">
+        <ul>
+            <a href="javascript:;"><li>网站首页</li></a>
+            <a href="javascript:;"><li>企业合作</li></a>
+            <a href="javascript:;"><li>人才招聘</li></a>
+            <a href="javascript:;"><li>联系我们</li></a>
+            <a href="javascript:;"><li>讲师招慕</li></a>
+            <a href="javascript:;"><li>常见问题</li></a>
+            <a href="javascript:;"><li>意见反馈</li></a>
+            <a href="javascript:;"><li>慕课大学</li></a>
+            <a href="javascript:;"><li>友情链接</li></a>
+        </ul>
+        <!--关注图标-->
+        <div class="footer-icon">
+            <span class="footer-icon-weixin_QRcode hide"></span>
+            <span class="footer-icon-weixin"></span>
+            <span class="footer-icon-xinlang"></span>
+            <span class="footer-icon-qq"></span>
+        </div>
+    </div>
+    <div class="footer-title">Copyrigth @ 2017 imooc.com ALL Rigthis Reserved |京ICP备 13016642号-2</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
