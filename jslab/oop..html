@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Obejct Oriential Programming</title>
+</head>
+<body>
+<script>
+function Human(name){
+  this.name = name;
+}
+
+function Wolf(name){
+  this.name = name;
+}
+
+Human.prototype.introduce = function() {
+  console.log('I am a '+ this.name);
+}
+
+Human.prototype.sing = function() {
+  console.log('lalala, lalala, lalalalalalalala');
+}
+
+Wolf.prototype.woo = function() {
+  console.log('Wooooooo ');
+}
+
+Wolf.prototype.eat = function() {
+  console.log('Aaaaa, wowowowo, wooo, ewwwoo');
+}
+
+function Werewolf(name){
+  Human.call(this);
+  Wolf.call(this);
+  this.name = name;
+}
+
+Werewolf.prototype = Object.create(Wolf.prototype);
+Object.assign(Werewolf.prototype, Human.prototype);
+Werewolf.prototype.constructor = Werewolf;
+
+var xm = new Werewolf('XiaoMing');
+xm.introduce();
+xm.sing();
+xm.woo();
+xm.eat();
+
+</script>
+</body>
+</html>
